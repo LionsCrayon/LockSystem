@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: lLockSystem
+  datasource:
+    url: jdbc:mysql://192.168.0.181:3306/lock_system?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+rocketmq:
+  name-server: 192.168.224.130:30830
+  producer:
+    group: lock-producer-group
+    send-message-timeout: 1000000
+mqtt:
+  broker: tcp://192.168.224.130:31337
+  client-id: lock-service-client
+  username:
+  password:
+server:
+  port: 8080
